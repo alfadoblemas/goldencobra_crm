@@ -1,0 +1,9 @@
+de:
+  activerecord:
+    models:
+      goldencobra_crm/customer:
+        one: "Kunde"
+        other: "Kunden"
+      customer:
+        one: "Kunde"
+        other: "Kunden"
