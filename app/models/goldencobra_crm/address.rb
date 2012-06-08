@@ -15,5 +15,6 @@ module GoldencobraCrm
     attr_accessible :customer_id, :location_id, :title
     belongs_to :location, class_name: Goldencobra::Location
     accepts_nested_attributes_for :location
+    belongs_to :customer, class_name: GoldencobraCrm::Customer
   end
 end
