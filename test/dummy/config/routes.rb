@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
-
   devise_for :users, ActiveAdmin::Devise.config
-
-  mount Goldencobra::Engine => '/'
-
   mount GoldencobraCrm::Engine => "/goldencobra_crm"
+  mount Goldencobra::Engine => '/'
 end
 #== Route Map
-# Generated on 08 Jun 2012 11:09
+# Generated on 08 Jun 2012 11:16
 #
 #       mark_as_startpage_admin_article GET        /admin/articles/:id/mark_as_startpage(.:format)       admin/articles#mark_as_startpage
 # set_page_online_offline_admin_article GET        /admin/articles/:id/set_page_online_offline(.:format) admin/articles#set_page_online_offline
@@ -80,6 +77,22 @@ end
 #                          admin_widget GET        /admin/widgets/:id(.:format)                          admin/widgets#show
 #                                       PUT        /admin/widgets/:id(.:format)                          admin/widgets#update
 #                                       DELETE     /admin/widgets/:id(.:format)                          admin/widgets#destroy
+#          batch_action_admin_companies POST       /admin/companies/batch_action(.:format)               admin/companies#batch_action
+#                       admin_companies GET        /admin/companies(.:format)                            admin/companies#index
+#                                       POST       /admin/companies(.:format)                            admin/companies#create
+#                     new_admin_company GET        /admin/companies/new(.:format)                        admin/companies#new
+#                    edit_admin_company GET        /admin/companies/:id/edit(.:format)                   admin/companies#edit
+#                         admin_company GET        /admin/companies/:id(.:format)                        admin/companies#show
+#                                       PUT        /admin/companies/:id(.:format)                        admin/companies#update
+#                                       DELETE     /admin/companies/:id(.:format)                        admin/companies#destroy
+#          batch_action_admin_customers POST       /admin/customers/batch_action(.:format)               admin/customers#batch_action
+#                       admin_customers GET        /admin/customers(.:format)                            admin/customers#index
+#                                       POST       /admin/customers(.:format)                            admin/customers#create
+#                    new_admin_customer GET        /admin/customers/new(.:format)                        admin/customers#new
+#                   edit_admin_customer GET        /admin/customers/:id/edit(.:format)                   admin/customers#edit
+#                        admin_customer GET        /admin/customers/:id(.:format)                        admin/customers#show
+#                                       PUT        /admin/customers/:id(.:format)                        admin/customers#update
+#                                       DELETE     /admin/customers/:id(.:format)                        admin/customers#destroy
 #           batch_action_admin_comments POST       /admin/comments/batch_action(.:format)                admin/comments#batch_action
 #                        admin_comments GET        /admin/comments(.:format)                             admin/comments#index
 #                                       POST       /admin/comments(.:format)                             admin/comments#create
@@ -105,12 +118,12 @@ end
 #                           user_unlock POST       /admin/unlock(.:format)                               devise/unlocks#create
 #                       new_user_unlock GET        /admin/unlock/new(.:format)                           devise/unlocks#new
 #                                       GET        /admin/unlock(.:format)                               devise/unlocks#show
-#                           goldencobra            /                                                     Goldencobra::Engine
 #                       goldencobra_crm            /goldencobra_crm                                      GoldencobraCrm::Engine
+#                           goldencobra            /                                                     Goldencobra::Engine
+# 
+# Routes for GoldencobraCrm::Engine:
 # 
 # Routes for Goldencobra::Engine:
 # sitemap GET /sitemap(.:format)     goldencobra/articles#sitemap {:format=>"xml"}
 #             /*article_id(.:format) goldencobra/articles#show
 #    root     /                      goldencobra/articles#show {:startpage=>true}
-# 
-# Routes for GoldencobraCrm::Engine:

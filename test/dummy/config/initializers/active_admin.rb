@@ -9,6 +9,7 @@ ActiveAdmin.setup do |config|
   config.authentication_method = :authenticate_user!
   config.current_user_method = :current_user
   config.logout_link_path = :destroy_user_session_path
+  config.register_stylesheet 'goldencobra/active_admin.css'
   config.register_stylesheet 'goldencobra/chosen.css'
   config.register_javascript 'goldencobra/active_admin.js' 
   config.register_javascript 'goldencobra_events/admin.js' 
