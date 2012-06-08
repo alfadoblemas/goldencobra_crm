@@ -1,0 +1,52 @@
+de:
+  activerecord:
+    models:
+      goldencobra_crm/customer:
+        one: "Kunde"
+        other: "Kunden"
+      customer:
+        one: "Kunde"
+        other: "Kunden"
+      goldencobra_crm/address:
+        one: "Adresse"
+        other: "Adressen"
+      address:
+        one: "Adresse"
+        other: "Adressen"
+      goldencobra_crm/company:
+        one: "Unternehmen"
+        other: "Unternehmen"
+      company:
+        one: "Unternehmen"
+        other: "Unternehmen"
+    attributes:
+      goldencobra_crm/customer:
+        company_id: "Unternehmen"
+        email: "E-Mail"
+        firstname: "Vorname"
+        lastname: "Nachname"
+        login: "Login"
+        user_id: "Benutzer"
+        created_at: "Erstellt am"
+        updated_at: "Bearbeitet am"
+      customer:
+        company_id: "Unternehmen"
+        email: "E-Mail"
+        firstname: "Vorname"
+        lastname: "Nachname"
+        login: "Login"
+        user_id: "Benutzer"
+        created_at: "Erstellt am"
+        updated_at: "Bearbeitet am"
+      goldencobra_crm/address:
+        location_id: "Ort"
+        title: "Bezeichnung"
+        customer_id: "Kunde"
+        created_at: "Erstellt am"
+        updated_at: "Bearbeitet am"
+      address:
+        location_id: "Ort"
+        title: "Bezeichnung"
+        customer_id: "Kunde"
+        created_at: "Erstellt am"
+        updated_at: "Bearbeitet am"

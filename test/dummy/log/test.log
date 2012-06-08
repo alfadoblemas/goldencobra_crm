@@ -137,3 +137,49 @@ Connecting to database specified by database.yml
   [1m[35mGoldencobra::Setting Load (0.1ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'opengraph_default_image' AND `goldencobra_settings`.`ancestry` = '1/8' LIMIT 1
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mGoldencobra::Setting Load (0.4ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'goldencobra_crm' AND `goldencobra_settings`.`ancestry` IS NULL LIMIT 1[0m
+  [1m[35m (4.4ms)[0m  BEGIN
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES (NULL, '2012-06-08 11:58:45', 'goldencobra_crm', '2012-06-08 11:58:45', '')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (0.4ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` IS NULL AND `goldencobra_settings`.`title` = 'goldencobra' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES (NULL, '2012-06-08 11:58:45', 'goldencobra', '2012-06-08 11:58:45', NULL)[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (4.3ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'page' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES ('2', '2012-06-08 11:58:45', 'page', '2012-06-08 11:58:45', NULL)[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (0.7ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'default_title_tag' AND `goldencobra_settings`.`ancestry` = '2/3' LIMIT 1[0m
+  [1m[35m (3.1ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES ('2/3', '2012-06-08 11:58:45', 'default_title_tag', '2012-06-08 11:58:45', 'Goldencobra')[0m
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (0.6ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'article' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES ('2', '2012-06-08 11:58:45', 'article', '2012-06-08 11:58:45', NULL)[0m
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (0.4ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2/5' AND `goldencobra_settings`.`title` = 'article_index' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES ('2/5', '2012-06-08 11:58:45', 'article_index', '2012-06-08 11:58:45', NULL)[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (1.1ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'link_to_article' AND `goldencobra_settings`.`ancestry` = '2/5/6' LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES ('2/5/6', '2012-06-08 11:58:45', 'link_to_article', '2012-06-08 11:58:45', 'weiterlesen')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (0.3ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'url' AND `goldencobra_settings`.`ancestry` = '2' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES ('2', '2012-06-08 11:58:45', 'url', '2012-06-08 11:58:45', 'www.goldencobra.de')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (1.9ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'facebook' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES ('2', '2012-06-08 11:58:45', 'facebook', '2012-06-08 11:58:45', NULL)[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (0.8ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'appid' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES ('2/9', '2012-06-08 11:58:45', 'appid', '2012-06-08 11:58:45', '123456')[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36mGoldencobra::Setting Load (0.5ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'opengraph_default_image' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO `goldencobra_settings` (`ancestry`, `created_at`, `title`, `updated_at`, `value`) VALUES ('2/9', '2012-06-08 11:58:45', 'opengraph_default_image', '2012-06-08 11:58:45', '/assets/open-graph.png')[0m
+  [1m[35m (1.6ms)[0m  COMMIT
