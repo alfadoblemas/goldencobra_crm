@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120608084441) do
+ActiveRecord::Schema.define(:version => 20120608093732) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20120608084441) do
     t.boolean  "article_for_index_images", :default => false
     t.boolean  "cacheable",                :default => true
     t.string   "image_gallery_tags"
+    t.string   "article_type"
   end
 
   add_index "goldencobra_articles", ["ancestry"], :name => "index_goldencobra_articles_on_ancestry"
@@ -139,11 +140,13 @@ ActiveRecord::Schema.define(:version => 20120608084441) do
     t.string   "title"
     t.string   "target"
     t.string   "css_class"
-    t.boolean  "active",     :default => true
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.boolean  "active",              :default => true
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "ancestry"
-    t.integer  "sorter",     :default => 0
+    t.integer  "sorter",              :default => 0
+    t.text     "description"
+    t.string   "call_to_action_name"
   end
 
   add_index "goldencobra_menues", ["ancestry"], :name => "index_goldencobra_menues_on_ancestry"
