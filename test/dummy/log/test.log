@@ -136,3 +136,4 @@ Connecting to database specified by database.yml
   [1m[36mGoldencobra::Setting Load (0.1ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'appid' AND `goldencobra_settings`.`ancestry` = '1/8' LIMIT 1[0m
   [1m[35mGoldencobra::Setting Load (0.1ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'opengraph_default_image' AND `goldencobra_settings`.`ancestry` = '1/8' LIMIT 1
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
