@@ -1541,3 +1541,16 @@ Served asset /active_admin/nested_menu_arrow.gif - 200 OK (13ms)
 
 Started GET "/assets/active_admin/nested_menu_arrow_dark.gif" for 127.0.0.1 at 2012-06-07 17:23:56 +0200
 Served asset /active_admin/nested_menu_arrow_dark.gif - 200 OK (14ms)
+Connecting to database specified by database.yml
+  [1m[36mGoldencobra::Setting Load (0.4ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'goldencobra_crm' AND `goldencobra_settings`.`ancestry` IS NULL LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.4ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` IS NULL AND `goldencobra_settings`.`title` = 'goldencobra' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.3ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '1' AND `goldencobra_settings`.`title` = 'page' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'default_title_tag' AND `goldencobra_settings`.`ancestry` = '1/2' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '1' AND `goldencobra_settings`.`title` = 'article' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '1/4' AND `goldencobra_settings`.`title` = 'article_index' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'link_to_article' AND `goldencobra_settings`.`ancestry` = '1/4/5' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'url' AND `goldencobra_settings`.`ancestry` = '1' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '1' AND `goldencobra_settings`.`title` = 'facebook' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'appid' AND `goldencobra_settings`.`ancestry` = '1/8' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'opengraph_default_image' AND `goldencobra_settings`.`ancestry` = '1/8' LIMIT 1[0m
+Connecting to database specified by database.yml
