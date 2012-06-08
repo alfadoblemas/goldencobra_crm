@@ -24,7 +24,7 @@ guard 'rspec', :version => 2 do
 end
 
 guard 'annotate', :run_at_start => false,:routes => true do
-  #watch( 'db/schema.rb' )
+  watch( 'db/schema.rb' )
 
   watch(%r{db/schema.rb}) do
       `rake db:test:prepare`
@@ -32,7 +32,7 @@ guard 'annotate', :run_at_start => false,:routes => true do
 
   # Uncomment the following line if you also want to run annotate anytime
   # a model file changes
-  #watch( 'app/models/**/*.rb' )
+  watch( '../../app/models/**/*.rb' )
 
   # Uncomment the following line if you are running routes annotation
   # with the ":routes => true" option

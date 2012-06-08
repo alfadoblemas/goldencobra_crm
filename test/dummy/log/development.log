@@ -1553,3 +1553,190 @@ Connecting to database specified by database.yml
   [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'facebook' LIMIT 1[0m
   [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'appid' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1
   [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'opengraph_default_image' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mGoldencobra::Setting Load (0.4ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'goldencobra_crm' AND `goldencobra_settings`.`ancestry` IS NULL LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.3ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` IS NULL AND `goldencobra_settings`.`title` = 'goldencobra' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'page' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'default_title_tag' AND `goldencobra_settings`.`ancestry` = '2/3' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'article' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2/5' AND `goldencobra_settings`.`title` = 'article_index' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'link_to_article' AND `goldencobra_settings`.`ancestry` = '2/5/6' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'url' AND `goldencobra_settings`.`ancestry` = '2' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.4ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'facebook' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'appid' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'opengraph_default_image' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (5.2ms)[0m  [1mDROP DATABASE IF EXISTS `goldencobra-crm-test`[0m
+  [1m[35m (1.2ms)[0m  CREATE DATABASE `goldencobra-crm-test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (10.5ms)[0m  [1mCREATE TABLE `active_admin_comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `resource_id` int(11) NOT NULL, `resource_type` varchar(255) NOT NULL, `author_id` int(11), `author_type` varchar(255), `body` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `namespace` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (4.9ms)[0m  CREATE INDEX `index_active_admin_comments_on_author_type_and_author_id` ON `active_admin_comments` (`author_type`, `author_id`)
+  [1m[36m (6.2ms)[0m  [1mCREATE INDEX `index_active_admin_comments_on_namespace` ON `active_admin_comments` (`namespace`)[0m
+  [1m[35m (6.7ms)[0m  CREATE INDEX `index_admin_notes_on_resource_type_and_resource_id` ON `active_admin_comments` (`resource_type`, `resource_id`)
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE `friendly_id_slugs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `slug` varchar(255) NOT NULL, `sluggable_id` int(11) NOT NULL, `sluggable_type` varchar(40), `created_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (5.2ms)[0m  CREATE UNIQUE INDEX `index_friendly_id_slugs_on_slug_and_sluggable_type` ON `friendly_id_slugs` (`slug`, `sluggable_type`)
+  [1m[36m (5.6ms)[0m  [1mCREATE INDEX `index_friendly_id_slugs_on_sluggable_id` ON `friendly_id_slugs` (`sluggable_id`)[0m
+  [1m[35m (5.5ms)[0m  CREATE INDEX `index_friendly_id_slugs_on_sluggable_type` ON `friendly_id_slugs` (`sluggable_type`)
+  [1m[36m (4.4ms)[0m  [1mCREATE TABLE `goldencobra_article_images` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `article_id` int(11), `image_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE `goldencobra_article_widgets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `article_id` int(11), `widget_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE `goldencobra_articles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `url_name` varchar(255), `slug` varchar(255), `content` text, `teaser` text, `ancestry` varchar(255), `startpage` tinyint(1) DEFAULT 0, `active` tinyint(1) DEFAULT 1, `subtitle` varchar(255), `summary` text, `context_info` text, `canonical_url` varchar(255), `robots_no_index` tinyint(1) DEFAULT 0, `breadcrumb` varchar(255), `template_file` varchar(255), `article_for_index_id` int(11), `article_for_index_levels` int(11) DEFAULT 0, `article_for_index_count` int(11) DEFAULT 0, `enable_social_sharing` tinyint(1), `article_for_index_images` tinyint(1) DEFAULT 0, `cacheable` tinyint(1) DEFAULT 1, `image_gallery_tags` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (5.7ms)[0m  CREATE INDEX `index_goldencobra_articles_on_ancestry` ON `goldencobra_articles` (`ancestry`)
+  [1m[36m (5.6ms)[0m  [1mCREATE INDEX `index_goldencobra_articles_on_slug` ON `goldencobra_articles` (`slug`)[0m
+  [1m[35m (3.1ms)[0m  CREATE TABLE `goldencobra_crm_addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `location_id` int(11), `title` varchar(255), `customer_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE `goldencobra_crm_companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `legal_form` varchar(255), `location_id` int(11), `phone` varchar(255), `fax` varchar(255), `website` varchar(255), `sector` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE `goldencobra_crm_customers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstname` varchar(255), `lastname` varchar(255), `email` varchar(255), `login` varchar(255), `company_id` int(11), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE `goldencobra_helps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `url` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE `goldencobra_locations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `lat` varchar(255), `lng` varchar(255), `street` varchar(255), `city` varchar(255), `zip` varchar(255), `region` varchar(255), `country` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `title` varchar(255)) ENGINE=InnoDB
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE `goldencobra_menues` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `target` varchar(255), `css_class` varchar(255), `active` tinyint(1) DEFAULT 1, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `ancestry` varchar(255), `sorter` int(11) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35m (6.3ms)[0m  CREATE INDEX `index_goldencobra_menues_on_ancestry` ON `goldencobra_menues` (`ancestry`)
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE `goldencobra_metatags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `value` varchar(255), `article_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE `goldencobra_permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `action` varchar(255), `subject_class` varchar(255), `subject_id` varchar(255), `role_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE `goldencobra_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE `goldencobra_roles_users` (`user_id` int(11), `role_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE `goldencobra_settings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `value` varchar(255), `ancestry` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE `goldencobra_uploads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `source` varchar(255), `rights` varchar(255), `description` text, `image_file_name` varchar(255), `image_content_type` varchar(255), `image_file_size` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE `goldencobra_vita` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `loggable_id` int(11), `loggable_type` varchar(255), `user_id` int(11), `title` varchar(255), `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (5.0ms)[0m  CREATE INDEX `index_goldencobra_vita_on_loggable_id` ON `goldencobra_vita` (`loggable_id`)
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE `goldencobra_widgets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `content` text, `css_name` varchar(255), `active` tinyint(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `id_name` varchar(255), `sorter` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE `taggings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tag_id` int(11), `taggable_id` int(11), `taggable_type` varchar(255), `tagger_id` int(11), `tagger_type` varchar(255), `context` varchar(128), `created_at` datetime) ENGINE=InnoDB
+  [1m[36m (5.5ms)[0m  [1mCREATE INDEX `index_taggings_on_tag_id` ON `taggings` (`tag_id`)[0m
+  [1m[35m (5.6ms)[0m  CREATE INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context` ON `taggings` (`taggable_id`, `taggable_type`, `context`)
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `password_salt` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `unconfirmed_email` varchar(255), `failed_attempts` int(11) DEFAULT 0, `unlock_token` varchar(255), `locked_at` datetime, `authentication_token` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `gender` tinyint(1), `title` varchar(255), `firstname` varchar(255), `lastname` varchar(255), `function` varchar(255), `phone` varchar(255), `fax` varchar(255), `facebook` varchar(255), `twitter` varchar(255), `linkedin` varchar(255), `xing` varchar(255), `googleplus` varchar(255)) ENGINE=InnoDB
+  [1m[36m (6.9ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_authentication_token` ON `users` (`authentication_token`)[0m
+  [1m[35m (7.0ms)[0m  CREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)
+  [1m[36m (6.2ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (6.7ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36m (6.3ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_unlock_token` ON `users` (`unlock_token`)[0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (5.4ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120608084441')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120109093658')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120109111205')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120109121212')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120109121213')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120109140423')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120109141338')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120110112157')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120110114803')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120112163045')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120112171037')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120112172723')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120113100243')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120113101714')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120113170904')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120120095700')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120125145920')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120125161800')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120126132846')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120206110452')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120209100956')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120217085735')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120217085835')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120221100021')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120307151355')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120312111338')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120312150558')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120313125443')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120313142221')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120313142421')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120314102039')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120315161536')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120321102414')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120321114923')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120321120727')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120321130204')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120321131058')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120327102754')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120416154848')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120420094029')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20120423141814')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20120509125734')
+Connecting to database specified by database.yml
+  [1m[36mGoldencobra::Setting Load (0.4ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'goldencobra_crm' AND `goldencobra_settings`.`ancestry` IS NULL LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.3ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` IS NULL AND `goldencobra_settings`.`title` = 'goldencobra' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'page' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.3ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'default_title_tag' AND `goldencobra_settings`.`ancestry` = '2/3' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'article' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2/5' AND `goldencobra_settings`.`title` = 'article_index' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'link_to_article' AND `goldencobra_settings`.`ancestry` = '2/5/6' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'url' AND `goldencobra_settings`.`ancestry` = '2' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'facebook' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'appid' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'opengraph_default_image' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mGoldencobra::Setting Load (1.6ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'goldencobra_crm' AND `goldencobra_settings`.`ancestry` IS NULL LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.4ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` IS NULL AND `goldencobra_settings`.`title` = 'goldencobra' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.3ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'page' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.3ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'default_title_tag' AND `goldencobra_settings`.`ancestry` = '2/3' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.6ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'article' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.5ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2/5' AND `goldencobra_settings`.`title` = 'article_index' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.3ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'link_to_article' AND `goldencobra_settings`.`ancestry` = '2/5/6' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.3ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'url' AND `goldencobra_settings`.`ancestry` = '2' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.3ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'facebook' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.3ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'appid' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.3ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'opengraph_default_image' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mGoldencobra::Setting Load (0.6ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'goldencobra_crm' AND `goldencobra_settings`.`ancestry` IS NULL LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.3ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` IS NULL AND `goldencobra_settings`.`title` = 'goldencobra' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.3ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'page' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'default_title_tag' AND `goldencobra_settings`.`ancestry` = '2/3' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'article' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.3ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2/5' AND `goldencobra_settings`.`title` = 'article_index' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'link_to_article' AND `goldencobra_settings`.`ancestry` = '2/5/6' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'url' AND `goldencobra_settings`.`ancestry` = '2' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`ancestry` = '2' AND `goldencobra_settings`.`title` = 'facebook' LIMIT 1[0m
+  [1m[35mGoldencobra::Setting Load (0.2ms)[0m  SELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'appid' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1
+  [1m[36mGoldencobra::Setting Load (0.2ms)[0m  [1mSELECT `goldencobra_settings`.* FROM `goldencobra_settings` WHERE `goldencobra_settings`.`title` = 'opengraph_default_image' AND `goldencobra_settings`.`ancestry` = '2/9' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateArticles (20120109093658)
+Migrating to AddDeviseToAdminUsers (20120109111205)
+Migrating to CreateAdminNotes (20120109121212)
+Migrating to MoveAdminNotesToComments (20120109121213)
+Migrating to CreateRoles (20120109140423)
+Migrating to CreateRoleUsers (20120109141338)
+Migrating to AddUrlnameToArticle (20120110112157)
+Migrating to CreateFriendlyIdSlugs (20120110114803)
+Migrating to AddBodyToArticles (20120112163045)
+Migrating to AddAncestryToArticles (20120112171037)
+Migrating to AddIndexToArticles (20120112172723)
+Migrating to CreateMenues (20120113100243)
+Migrating to AddAncestryToMenues (20120113101714)
+Migrating to AddStartpageToArticle (20120113170904)
+Migrating to CreateGoldencobraMetatags (20120120095700)
+Migrating to AddFieldsToArticles (20120125145920)
+Migrating to AddNoindexToArticles (20120125161800)
+Migrating to CreateGoldencobraUploads (20120126132846)
+Migrating to CreateGoldencobraLocations (20120206110452)
+Migrating to CreateGoldencobraSettings (20120209100956)
+Migrating to AddOptionsToUsers (20120217085735)
+Migrating to AddDefaultUsersAndRoles (20120217085835)
+Migrating to CreateGoldencobraHelps (20120221100021)
+Migrating to AddBreadcrumbToGoldencobraArticles (20120307151355)
+Migrating to CreateGoldencobraWidgets (20120312111338)
+Migrating to CreateGoldencobraArticleWidgets (20120312150558)
+Migrating to CreateGoldencobraPermissions (20120313125443)
+Migrating to AddNameToGoldencobraWidgets (20120313142221)
+Migrating to AddSorterToGoldencobraWidgets (20120313142421)
+Migrating to AddTemplateToGoldencobraArticles (20120314102039)
+Migrating to AddSorterToGoldencobraMenue (20120315161536)
+Migrating to ActsAsTaggableOnMigration (20120321102414)
+Migrating to AddArticleindexToGoldencobraArticles (20120321114923)
+Migrating to AddSocialSharingToGoldencobraArticles (20120321120727)
+Migrating to AddArticleindeximagesToGoldencobraArticles (20120321130204)
+Migrating to CreateGoldencobraArticleImages (20120321131058)
+Migrating to AddDefault404Article (20120327102754)
+Migrating to CreateGoldencobraVita (20120416154848)
+Migrating to AddCachableToGoldencobraArticles (20120420094029)
+Migrating to AddImagegalleryToGoldencobraArticles (20120423141814)
+Migrating to AddTitleToGoldencobraLocations (20120509125734)
+Migrating to CreateGoldencobraCrmCustomers (20120607153058)
+  [1m[36m (7.5ms)[0m  [1mCREATE TABLE `goldencobra_crm_customers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstname` varchar(255), `lastname` varchar(255), `email` varchar(255), `login` varchar(255), `company_id` int(11), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120607153058')
+Migrating to CreateGoldencobraCrmAddresses (20120608081129)
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE `goldencobra_crm_addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `location_id` int(11), `title` varchar(255), `customer_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120608081129')
+Migrating to CreateGoldencobraCrmCompanies (20120608084441)
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE `goldencobra_crm_companies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `legal_form` varchar(255), `location_id` int(11), `phone` varchar(255), `fax` varchar(255), `website` varchar(255), `sector` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20120608084441')
+  [1m[36m (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m

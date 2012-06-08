@@ -399,7 +399,6 @@ DEPENDENCIES
   mysql2
   pry
   rb-fsevent!
-  rspec
   rspec-rails
   thin
   webrat
