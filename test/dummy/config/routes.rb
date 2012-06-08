@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   mount Goldencobra::Engine => '/'
 end
 #== Route Map
-# Generated on 07 Jun 2012 17:47
+# Generated on 08 Jun 2012 10:46
 #
 #       mark_as_startpage_admin_article GET        /admin/articles/:id/mark_as_startpage(.:format)       admin/articles#mark_as_startpage
 # set_page_online_offline_admin_article GET        /admin/articles/:id/set_page_online_offline(.:format) admin/articles#set_page_online_offline
@@ -80,6 +80,14 @@ end
 #                          admin_widget GET        /admin/widgets/:id(.:format)                          admin/widgets#show
 #                                       PUT        /admin/widgets/:id(.:format)                          admin/widgets#update
 #                                       DELETE     /admin/widgets/:id(.:format)                          admin/widgets#destroy
+#          batch_action_admin_customers POST       /admin/customers/batch_action(.:format)               admin/customers#batch_action
+#                       admin_customers GET        /admin/customers(.:format)                            admin/customers#index
+#                                       POST       /admin/customers(.:format)                            admin/customers#create
+#                    new_admin_customer GET        /admin/customers/new(.:format)                        admin/customers#new
+#                   edit_admin_customer GET        /admin/customers/:id/edit(.:format)                   admin/customers#edit
+#                        admin_customer GET        /admin/customers/:id(.:format)                        admin/customers#show
+#                                       PUT        /admin/customers/:id(.:format)                        admin/customers#update
+#                                       DELETE     /admin/customers/:id(.:format)                        admin/customers#destroy
 #           batch_action_admin_comments POST       /admin/comments/batch_action(.:format)                admin/comments#batch_action
 #                        admin_comments GET        /admin/comments(.:format)                             admin/comments#index
 #                                       POST       /admin/comments(.:format)                             admin/comments#create
