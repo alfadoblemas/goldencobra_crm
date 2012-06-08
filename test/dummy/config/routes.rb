@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   mount GoldencobraCrm::Engine => "/goldencobra_crm"
   mount Goldencobra::Engine => '/'
 end
-#== Route Map
-# Generated on 08 Jun 2012 11:24
+
 #
 #       mark_as_startpage_admin_article GET        /admin/articles/:id/mark_as_startpage(.:format)       admin/articles#mark_as_startpage
 # set_page_online_offline_admin_article GET        /admin/articles/:id/set_page_online_offline(.:format) admin/articles#set_page_online_offline

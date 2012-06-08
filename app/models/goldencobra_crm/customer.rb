@@ -16,5 +16,20 @@
 module GoldencobraCrm
   class Customer < ActiveRecord::Base
     attr_accessible :company_id, :email, :firstname, :lastname, :login, :user_id
+    has_many :addresses
+    belongs_to :company
+
+    def shipping_address
+      GoldencobraCrm::Address.where(:customer_id => self.id, :title => "shipping address").first
+    end
+
+    def set_shipping_address(address_id, customer_id)
+      GoldencobraCrm::Address.where(:customer_id => customer_id).each do |a|
+        if a.title == "shipping address"
+          a.update_attributes(:title => "old shipping address")
+        end
+      end
+      GoldencobraCrm::Address.find_by_id(address_id).update_attributes(:title => "shipping address")
+    end
   end
 end

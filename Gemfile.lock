@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/ikusei/Goldencobra.git
-  revision: 4d5029c0b0a15e4a15fa1d975e0a97a86ae29552
+  revision: 6ea83c8e3dd2bebe668058649241096981c3ee0c
   specs:
     goldencobra (1.0.3)
       activeadmin
@@ -342,6 +342,8 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
+    shoulda-matchers (1.1.0)
+      activesupport (>= 3.0.0)
     slop (2.4.4)
     sprockets (2.1.3)
       hike (~> 1.2)
@@ -400,5 +402,6 @@ DEPENDENCIES
   pry
   rb-fsevent!
   rspec-rails
+  shoulda-matchers
   thin
   webrat

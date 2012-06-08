@@ -5,6 +5,7 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require "factory_girl"
 require "factory_girl_rails"
+require "shoulda-matchers"
 
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -21,7 +22,6 @@ RSpec.configure do |config|
   # config.mock_with :rr
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryGirl::Syntax::Methods
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
