@@ -16,3 +16,4 @@ rerun.txt
 pickle-email-*.html
 test/dummy/tmp/*
 test/dummy/log/*
+test/dummy/log/
