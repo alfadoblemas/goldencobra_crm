@@ -1,13 +1,18 @@
+# encoding: utf-8
+
 source "http://rubygems.org"
 
 gemspec
 
 gem 'activeadmin', :git => "git://github.com/ikusei/active_admin.git", :require => "activeadmin"
-gem 'goldencobra', :git => "git://github.com/ikusei/Goldencobra.git"
+gem 'goldencobra', :git => 'ssh://git@git.ikusei.de:7999/GC/basis-modul.git'
+gem 'acts-as-taggable-on', :git => 'git://github.com/mbleigh/acts-as-taggable-on.git'
 gem 'compass-rails'
 gem 'coffee-rails'
+gem 'sass'
 
 gem "rspec-rails", :group => [:test, :development] # rspec in dev so the rake tasks run properly
+gem 'railties', '3.2.12'
 
 group :development do
   gem 'thin'
