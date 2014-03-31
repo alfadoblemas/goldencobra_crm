@@ -9,6 +9,7 @@ module GoldencobraCrm
 
     validates_presence_of :server_ip
     validates_presence_of :reference_id
+    validates_uniqueness_of :external_id
 
     def generate_external_id
       last_used_number = GoldencobraCrm::Mandate.order(:created_at).last.try(:internal_id).to_i + 1 + Goldencobra::Setting.for_key('goldencobra_crm.api.mandate.initial_counter').to_i
