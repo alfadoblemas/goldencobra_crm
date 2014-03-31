@@ -1,8 +1,10 @@
+# encoding: utf-8
+
 Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
   devise_for :users, ActiveAdmin::Devise.config
-  mount GoldencobraCrm::Engine => "/goldencobra_crm"
+  mount GoldencobraCrm::Engine => "/crm"
   mount Goldencobra::Engine => '/'
 end
 
@@ -119,9 +121,9 @@ end
 #                                       GET        /admin/unlock(.:format)                               devise/unlocks#show
 #                       goldencobra_crm            /goldencobra_crm                                      GoldencobraCrm::Engine
 #                           goldencobra            /                                                     Goldencobra::Engine
-# 
+#
 # Routes for GoldencobraCrm::Engine:
-# 
+#
 # Routes for Goldencobra::Engine:
 # sitemap GET /sitemap(.:format)     goldencobra/articles#sitemap {:format=>"xml"}
 #             /*article_id(.:format) goldencobra/articles#show
