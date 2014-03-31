@@ -1,0 +1,33 @@
+<%= form_for(@mandate) do |f| %>
+  <% if @mandate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mandate.errors.count, "error") %> prohibited this mandate from being saved:</h2>
+
+      <ul>
+      <% @mandate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :external_id %><br />
+    <%= f.text_field :external_id %>
+  </div>
+  <div class="field">
+    <%= f.label :server_name %><br />
+    <%= f.text_field :server_name %>
+  </div>
+  <div class="field">
+    <%= f.label :server_ip %><br />
+    <%= f.text_field :server_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_id %><br />
+    <%= f.text_field :reference_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

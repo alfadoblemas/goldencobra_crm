@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  external_id: MyString
+  server_name: MyString
+  server_ip: MyString
+  reference_id: MyString
+
+two:
+  external_id: MyString
+  server_name: MyString
+  server_ip: MyString
+  reference_id: MyString

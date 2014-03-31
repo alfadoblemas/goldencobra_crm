@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140325111753) do
+ActiveRecord::Schema.define(:version => 20140331112726) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -149,6 +149,47 @@ ActiveRecord::Schema.define(:version => 20140325111753) do
     t.string   "ancestry"
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
+  end
+
+  create_table "goldencobra_crm_addresses", :force => true do |t|
+    t.integer  "location_id"
+    t.string   "title"
+    t.integer  "customer_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "goldencobra_crm_companies", :force => true do |t|
+    t.string   "title"
+    t.string   "legal_form"
+    t.integer  "location_id"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "website"
+    t.string   "sector"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "goldencobra_crm_customers", :force => true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "login"
+    t.integer  "company_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "goldencobra_crm_mandates", :force => true do |t|
+    t.string   "external_id"
+    t.string   "server_name"
+    t.string   "server_ip"
+    t.string   "reference_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "internal_id"
   end
 
   create_table "goldencobra_domains", :force => true do |t|

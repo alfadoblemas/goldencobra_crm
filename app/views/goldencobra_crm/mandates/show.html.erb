@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>External:</b>
+  <%= @mandate.external_id %>
+</p>
+
+<p>
+  <b>Server name:</b>
+  <%= @mandate.server_name %>
+</p>
+
+<p>
+  <b>Server ip:</b>
+  <%= @mandate.server_ip %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%= @mandate.reference_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_mandate_path(@mandate) %> |
+<%= link_to 'Back', mandates_path %>
