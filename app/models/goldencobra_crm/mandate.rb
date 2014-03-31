@@ -3,10 +3,12 @@
 module GoldencobraCrm
   class Mandate < ActiveRecord::Base
 
-    attr_accessible :external_id, :reference_id, :server_ip, :server_name, :internal_id
+    attr_accessible :external_id, :reference_id, :server_ip, :server_name, :internal_id, :visitor_id
 
     before_create :generate_external_id
+    belongs_to :visitor
 
+    validates_presence_of :visitor_id
     validates_presence_of :server_ip
     validates_presence_of :reference_id
     validates_uniqueness_of :external_id

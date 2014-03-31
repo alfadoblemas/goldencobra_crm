@@ -7,6 +7,7 @@ ActiveAdmin.register GoldencobraCrm::Mandate, as: "Mandate" do
     column :external_id
     column :reference_id
     column :server_ip
+    column :visitor
     column :created_at
     default_actions
   end

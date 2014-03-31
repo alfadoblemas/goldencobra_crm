@@ -12,6 +12,7 @@ module GoldencobraCrm
         def create
           @mandate = Mandate.new(params[:mandate])
           @mandate.server_ip = request.remote_ip
+          @mandate.visitor = current_visitor
 
           respond_to do |format|
             if @mandate.save
