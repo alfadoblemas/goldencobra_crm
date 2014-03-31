@@ -1,6 +1,12 @@
 de:
   activerecord:
     models:
+      mandate:
+        one: "MandatID"
+        other: "MandatIds"
+      goldencobra_crm/mandate:
+        one: "MandatID"
+        other: "MandatIds"
       goldencobra_crm/customer:
         one: "Kunde"
         other: "Kunden"
